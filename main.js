@@ -5,6 +5,7 @@ const url = require('url');
 const servFile = require('./servfile');
 const change = require('./change');
 const qs = require('querystring');
+const config = require('./config')
 
 const pageGroups={
     GET:{
@@ -70,4 +71,4 @@ http.createServer(function (req, res) {
         processRequest(req,res)
     }
 
-}).listen(8080);
+}).listen(config.port);
