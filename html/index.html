@@ -1,0 +1,21 @@
+<html>
+    <link rel="stylesheet" href="password.css">
+    <body>
+        <div id="playfab-password">
+            <h1>Reset Password</h1>
+            <img src="logo.png" class="logo"/>
+            <p>Enter your new password here. We will then reset your password to the new one and you should be able to log in again.</p>
+            <form action="change.html" method="post" autocomplete="off" class="playfab-container">
+                <input type="password" name="Password" placeholder="New password" />
+                <input id="token" value="" name="Token" hidden="true">    
+                <script>
+                    var url_string = window.location.href;
+                    var url = new URL(url_string);
+                    var c = url.searchParams.get("token");
+                    document.getElementById("token").value = c;
+                </script>
+                <input type="submit" value="Set my Password"/>
+            </form>
+        </div>
+    </body>
+</html>

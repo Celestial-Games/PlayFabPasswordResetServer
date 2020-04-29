@@ -1,0 +1,15 @@
+{
+  "name": "PlayFabPasswordReset",
+  "version": "1.0.0",
+  "description": "This is a simple server project to assist with the resetting of a play-fab user password..",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "author": "Travis Bulford",
+  "devDependencies": {},
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "axios": "^0.19.2",
+    "node-fetch": "^2.6.0"
+  }
+}
