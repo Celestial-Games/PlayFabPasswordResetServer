@@ -1,9 +1,9 @@
 var fs = require('fs');
 
-exports.hostFile = function(file) {
+exports.hostFile = function(file, contentType='text/html') {
     return function(q, res) {
         fs.readFile(file, function(err, data) {
-            res.writeHead(200, {'Content-Type': 'text/html'});
+            res.writeHead(200, {'Content-Type': contentType});
             res.write(data);
             return res.end();
         });

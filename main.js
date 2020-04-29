@@ -8,6 +8,21 @@ const qs = require('querystring');
 
 const pageGroups={
     GET:{
+        "/apple-icon-57x57.png": servFile.hostImage("png", "./html/favicon/apple-icon-57x57.png"),
+        "/apple-icon-60x60.png": servFile.hostImage("png", "./html/favicon/apple-icon-60x60.png"),
+        "/apple-icon-72x72.png": servFile.hostImage("png", "./html/favicon/apple-icon-72x72.png"),
+        "/apple-icon-76x76.png": servFile.hostImage("png", "./html/favicon/apple-icon-76x76.png"),
+        "/apple-icon-114x114.png": servFile.hostImage("png", "./html/favicon/apple-icon-114x114.png"),
+        "/apple-icon-120x120.png": servFile.hostImage("png", "./html/favicon/apple-icon-120x120.png"),
+        "/apple-icon-144x144.png": servFile.hostImage("png", "./html/favicon/apple-icon-144x144.png"),
+        "/apple-icon-152x152.png": servFile.hostImage("png", "./html/favicon/apple-icon-152x152.png"),
+        "/apple-icon-180x180.png": servFile.hostImage("png", "./html/favicon/apple-icon-180x180.png"),
+        "/android-icon-192x192.png": servFile.hostImage("png", "./html/favicon/android-icon-192x192.png"),
+        "/favicon-32x32.png": servFile.hostImage("png", "./html/favicon/favicon-32x32.png"),
+        "/favicon-96x96.png": servFile.hostImage("png", "./html/favicon/favicon-96x96.png"),
+        "/favicon-16x16.png": servFile.hostImage("png", "./html/favicon/favicon-16x16.png"),
+        "/manifest.json": servFile.hostFile("./html/favicon/manifest.json","text/json"),
+        "/ms-icon-144x144.png": servFile.hostImage("png", "./html/favicon/ms-icon-144x144.png"),
         "/logo.png": servFile.hostImage("png", "./html/logo.png"),
         "/password.css": servFile.hostFile("./html/password.css"),
         "/": servFile.hostFile("./html/index.html"),
