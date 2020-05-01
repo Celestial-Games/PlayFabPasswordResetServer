@@ -56,19 +56,24 @@ function processRequest(req,res,body=null){
 }
 
 http.createServer(function (req, res) {
-    if (req.method=="POST") {
-        var body='';
-        req.on('data', function (data) {
-            body += data;
-            if (body.length > 1e6) { 
-                req.connection.destroy();
-            }
-        });
-        req.on('end', function () {
-            processRequest(req,res,qs.parse(body))
-        });
-    } else {
-        processRequest(req,res)
+    try {
+        if (req.method=="POST") {
+            var body='';
+            req.on('data', function (data) {
+                body += data;
+                if (body.length > 1e6) { 
+                    req.connection.destroy();
+                }
+            });
+            req.on('end', function () {
+                processRequest(req,res,qs.parse(body))
+            });
+        } else {
+            processRequest(req,res)
+        }
+    } catch (err) {
+        res.writeHead(500, "{serverError}");
+        res.end();
+        console.error(err)
     }
-
 }).listen(config.port);

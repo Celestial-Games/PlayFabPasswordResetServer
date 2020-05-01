@@ -3,12 +3,14 @@ const config = require('./config')
 
 exports.changePost = function(fileOkay, fileFailed) {
     return function(_ , res, body) {
-        fetch('https://' + config.titleid + '.playfabapi.com/Admin/ResetPassword',{
+        console.log(JSON.stringify(body))
+        fetch('https://' + config.titleid + '.playfabapi.com/Admin/ResetPassword?sdk=PostmanCollection-0.100.200421',{
             method: 'post',
-            body:    JSON.stringify(body),
+            body: JSON.stringify(body),
             headers: { 
-                'Content-Type': 'application/json',
-                'SecretKey': config.secretkey
+                'Content-Type': 'application/json; charset=utf-8',
+                'X-PlayFabSDK': 'PostmanCollection-0.100.200421',
+                'X-SecretKey': config.secretkey
             },
         })
         .then(result => {
@@ -29,7 +31,7 @@ exports.changePost = function(fileOkay, fileFailed) {
         .catch(err => {
             res.writeHead(500, "{serverError}");
             res.end();
-            console.log(err)
+            console.error(err)
         })
     }
 }
