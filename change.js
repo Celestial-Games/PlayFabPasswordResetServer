@@ -18,7 +18,6 @@ exports.changePost = function(fileOkay, fileFailed) {
                     'Location': fileOkay
                 });
                 res.end();
-                console.log(result)
             } else {
                 res.writeHead(302, {
                     'Location': fileFailed
