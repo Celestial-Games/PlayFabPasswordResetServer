@@ -3,7 +3,6 @@ const config = require('./config')
 
 exports.changePost = function(fileOkay, fileFailed) {
     return function(_ , res, body) {
-        console.log(JSON.stringify(body))
         fetch('https://' + config.titleid + '.playfabapi.com/Admin/ResetPassword?sdk=PostmanCollection-0.100.200421',{
             method: 'post',
             body: JSON.stringify(body),
