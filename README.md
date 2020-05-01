@@ -30,4 +30,4 @@ Additionally the solution will listen on the environment variable `PORT` this is
 
 ## Disclaimer
 
-This is my very first node project so node experts may indeed find it laking in many ways. If you see anything you would suggest I fix or change please get in touch.
+This is my very first node project so node experts may indeed find it lacking in many ways. If you see anything you would suggest I fix or change please get in touch.
