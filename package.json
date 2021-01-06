@@ -9,7 +9,7 @@
   "devDependencies": {},
   "dependencies": {
     "dotenv": "^8.2.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "node-fetch": "^2.6.0"
   }
 }
