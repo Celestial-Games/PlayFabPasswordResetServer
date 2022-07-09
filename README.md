@@ -14,12 +14,11 @@ Check the project code out if you want to execute it locally you will need node.
 
 You should modify the logo and the favicons. Additionally you can modify the .css to change the look of the solution.
 
-
 ### Step 3 upload your project to a hosting solution
 
 We are using heroku.com but any solution that hosts a node application will work.
 
-In your environment you will need the following two vairables.
+In your environment you will need the following two variables.
 
 ```
 pf_titleid={Your playfab title id
